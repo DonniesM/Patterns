@@ -10,9 +10,19 @@ public class Main {
         int n = sc.nextInt();
         pattern3(n);
     }
-    static void pattern3(int n){
-        for(int row = 0; row < n; row++){
-            for(int col = n-1; col >= row; col--){
+
+    //    static void pattern3(int n){
+//        for(int row = 0; row < n; row++){
+//            for(int col = n-1; col >= row; col--){
+//                System.out.print("* ");
+//            }
+//            System.out.println(" ");
+//        }
+//    }
+    //ANOTHER LOGIC
+    static void pattern3(int n) {
+        for (int row = 1; row <= n; row++) {
+            for (int col = 1; col <= n-row+1; col++) {
                 System.out.print("* ");
             }
             System.out.println(" ");
