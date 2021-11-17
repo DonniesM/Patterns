@@ -11,25 +11,47 @@ public class Main {
         pattern5(n);
     }
 
+    //    static void pattern5(int n) {
+//        int i = 1;
+//
+//        for (int row = 1; row <= 2 * n - 1; row++) {
+//
+//            if (row <= n) {
+//                for (int col = 1; col <= row; col++) {
+//                    System.out.print("* ");
+//                }
+//                System.out.println(" ");
+//            } else {
+////                if (row >= n) {
+//                    for (int col = 1; col <= n-i; col++) {
+//                        System.out.print("* ");
+//
+//                    }
+//                    i++;
+//                    System.out.println(" ");
+////                }
+//            }
+//        }
+//    }
     static void pattern5(int n) {
-        int i = 1;
+        int i = 0;
 
-        for (int row = 1; row <= 2 * n - 1; row++) {
+        for (int row = 0; row < 2 * n; row++) {
 
-            if (row <= n) {
-                for (int col = 1; col <= row; col++) {
+            if (row < n) {
+                for (int col = 0; col < row; col++) {
                     System.out.print("* ");
                 }
                 System.out.println(" ");
             } else {
-//                if (row >= n) {
-                    for (int col = 1; col <= n-i; col++) {
-                        System.out.print("* ");
 
-                    }
-                    i++;
-                    System.out.println(" ");
-//                }
+                for (int col = 0; col < n - i; col++) {
+                    System.out.print("* ");
+
+                }
+                i++;
+                System.out.println(" ");
+
             }
         }
     }
