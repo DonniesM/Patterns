@@ -9,6 +9,7 @@ public class Main {
         System.out.println("Enter n : ");
         int n = sc.nextInt();
         pattern31(n);
+        pattern31k(n);
     }
 
     static void pattern31(int n) {
@@ -41,6 +42,18 @@ public class Main {
             System.out.println(" ");
 
         }
+        System.out.println("                                                       ");
 
+    }
+    static void pattern31k(int n){
+        int a = n;
+        n = 2*n;
+        for(int row = 1;row<n;row++){
+            for(int col = 1;col<n; col++){
+                int atEachIndex = Math.min(Math.min(row,col), Math.min(n-row,n-col));
+                System.out.print(((a-atEachIndex)+1)+" ");
+            }
+            System.out.println(" ");
+        }
     }
 }
