@@ -12,7 +12,7 @@ public class Main {
         pattern16(n);
     }
     static void pattern16(int n){
-        int PascalTriangle[][] = new int[n][2*n];
+        int[][] PascalTriangle = new int[n][2*n];
 
         for(int row = 0; row<n; row++){
 
@@ -20,9 +20,7 @@ public class Main {
                 System.out.print(" ");
             }
             int colValue = 0;
-            originalCol:
             for(int col = n-row;col<=2*n-n+row;col+=2){
-                int count = 0;
                 colValue = ((col!=n-row)&&(col!=2*n-n+row))?PascalTriangle[row-1][col-1]+PascalTriangle[row-1][col+1]:1;
                 PascalTriangle[row][col]=colValue;
                 System.out.print(PascalTriangle[row][col]+" ");
