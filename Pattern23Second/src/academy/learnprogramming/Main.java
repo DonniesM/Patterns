@@ -36,7 +36,7 @@ public class Main {
                 }
             }
             else {
-                System.out.printf("%7s"," ");
+                System.out.printf("%"+(2*n-2)+"s"," ");
             }
             for (int col = 1; col <= n; col++) {
                 if (col != row) {
